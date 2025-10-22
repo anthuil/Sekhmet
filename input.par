@@ -1,0 +1,40 @@
+&parameters
+
+! Input stellar model (base m1.5 ... schroeder)
+  Stellar_model = 'Stellar_models/m1.5_FeH0_4.14_schroeder_final.hr'
+
+  formalism = 3 ! (base : 3) | 1 : Fellay 2023 | 2 : Villaver 2014 | 3 : Homemade
+  verbose = 0 ! Amount of details to print. | 0 : minimum | 1 : big steps | 2 : full details
+
+! Planet Properties
+  a = 1.5             ! Semi-major axis in AU (base 2.0) (Mercury 0.387 | Venus 0.72 | Earth 1 | Mars 1.52 | Jupiter 5.2)
+  e = 0.0             ! Eccentricity (base 0.0) | (Earth ~ 0.017 | Mars 0.093)
+  R_Planet = 1.0      ! Jupiter radius (base 1.0) | (Mercury 0.035 | Venus 0.087 | Earth ~0.09 | Mars 0.048)
+  M_Planet = 1.0      ! Jupiter mass (base 1.0) | (Mercury 0.00017 | Venus 0.0026 | M_Earth ~0.003 | Mars 0.00034)
+  Omega_planet = 7e-5 ! Planet's rotation rate (on itself) [rad/s] (base 7e-5) | (period, omega) : (1h, 2e-3) (10h, 2e-4) (1j, 7e-5) (100j, 7e-7) | For homemade and V14.
+  k2dt_planet = 1e-2  ! Time lag (base 1e-2) | Ranges from 1e-4 to 0.5 | For Homemade and F23.
+  I_planet_coef = 0.3 ! Moment of inertia of the planet (base 0.3) | Earth : 0.33 | Jupiter : 0.25 | [kg m2] | 0.4 = homogene | ~0 = all mass in core.
+
+  Q_p = 1.e5          ! Tidal dissipation parameter of the planet (Base 1.e5) | Only for V14.
+  alpha_p = 0.26      ! Square of the radius of gyration (base = 0.26) cf [Matumura 2010] | Only for V14.
+
+! Stellar environment
+  T_wind = 2500.    ! Temperature of the medium [K]. (Base = 2500.)
+  mu = 1.38         ! Mean molecular weight (Base = 1.38) [Do not change, this parameter is well constrained]
+  wind_speed = 5000 ! [m/s] (base 5000) | see Villaver 2008 & 2014
+  omega_star = 1e-7 ! Initial rotation rate of the star in [rad/s] (base 1e-7) | Typicaly 40-140 days (=1.8e-6 to 5.2e-7) but 5-200 days (=1.5e-5 to 3.6e-7) also observed (see Ceillier 2018).
+
+! Programmatical parameters
+  ! Start time of the simulation
+    time0 = 2.56e9  ! [years] (base 2.56e9) | Villaver 2014 : time0 = 4.560E9 || Minimal time : 1.0Ms:1.07e10 | 1.2Ms:5.43e9 | 1.5Ms:2.33e9 | 1.7Ms:1.501e9 | 2.0Ms:9.24e8
+
+  ! Integration time
+    dt_max = 1.0e8    ! [years] (base 1e8) | Villaver 2014 : dt_max = 6e7
+
+  ! Maximum relative variation for "a", "e" and "Omega_star" in a single timestep
+    eps    = 0.01   ! (base 0.01)
+
+  ! Force continue if timestep becomes too small (force increase its value)
+  force_continue = 1 ! (base 1) | 0 : stop computation | 1 : increase value
+
+/
