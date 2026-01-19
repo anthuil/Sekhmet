@@ -27,7 +27,7 @@ program Sekhmet
   integer :: formalism
   integer, parameter :: Logfile = 14
   integer, parameter :: Special_print_file = 15
-  integer :: Special_print = 1 ! Prints more data in a separate file
+  integer :: Special_print = 0 ! Prints more data in a separate file | printed variables: "iter, time, dot_a, dot_a_drag, dot_a_eq_tides_star, dot_a_eq_tides_planet, dot_a_ang_mom"
 
   ! Converters from cgs to SI units
   real, parameter :: unit_conv_dist = 100.
