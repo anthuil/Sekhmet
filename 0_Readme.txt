@@ -1,6 +1,6 @@
 This release contains files necessary to run Sekhmet and examples of results.
 Necessary files are :
-   - A stellar model
+   - A STAREVOL stellar model (any use of these models must cite: Siess, L., Dufour, E., & Forestini, M. 2000, A&A, 358, 593)
    - "input.par" : list of all input parameters and their value (with indication of the reference value for each)
    - Sekhmet.x (compiled version of "Sekhmet_Release-1.f90")
    - Amon-Ra_Release1.py
