@@ -13,7 +13,7 @@ How to run Sekhmet :
    - Define the initial parameters in the "input.par" file
    - Run Sekhmet.x
    - It produces output files "Sekhmet_output[...].csv" and a log file "Sekhmet.log".
-   - Run Amon-Ra with the output file(s) that you want to consider to prin graphs of "a", "e" or "dot(a)" (edit the .py file to change the printed parameter, default is "a")
+   - Run Amon-Ra with the output file(s) that you want to consider to print graphs of "a", "e" or "dot(a)" (you can edit the .py file to change the printed parameter, default is "a")
 
 Contact:
 Antoine Thuillier
