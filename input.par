@@ -1,7 +1,7 @@
 &parameters
 
 ! Input stellar model (base m1.5 ... schroeder)
-  Stellar_model = 'Stellar_models/m1.5_FeH0_4.14_schroeder_final.hr'
+  Stellar_model = 'Stellar_models/m1.5_FeH0_5.22_schroeder_final.hr' ! Path and name of the stellar model to use.
 
   formalism = 3 ! (base : 3) | 1 : Fellay 2023 | 2 : Villaver 2014 | 3 : Homemade
   verbose = 0 ! Amount of details to print. | 0 : minimum | 1 : big steps | 2 : full details
